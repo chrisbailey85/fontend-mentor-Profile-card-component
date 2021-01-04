@@ -35,7 +35,7 @@ body {
   display: block;
   position: absolute;
   top: -520px;
-  left: -290px;
+  left: -220px;
   width: 978px;
   height: 978px;
 }
@@ -48,7 +48,7 @@ body {
   display: block;
   position: absolute;
   top: 370px;
-  right: -190px;
+  right: -200px;
   width: 978px;
   height: 978px;
 }
@@ -169,6 +169,17 @@ body {
 .attribution a {
   cursor: pointer;
   color: #ddd;
+}
+
+@media (max-width: 1440px) {
+  .container::before {
+    top: -520px;
+    left: -290px;
+  }
+  .container::after {
+    top: 370px;
+    right: -190px;
+  }
 }
 
 @media (max-width: 1024px) {
