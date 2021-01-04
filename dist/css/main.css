@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #19a2ae;
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.light-text {
+  color: #6a6f81;
+  font-weight: 400;
+}
+
+.dark-text {
+  color: #2d3248;
+  font-size: 700;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  background: url("../images/bg-pattern-top.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  position: absolute;
+  top: -520px;
+  left: -290px;
+  width: 978px;
+  height: 978px;
+}
+
+.container::after {
+  content: "";
+  background: url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  position: absolute;
+  top: 370px;
+  right: -190px;
+  width: 978px;
+  height: 978px;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 40% 35% 25%;
+      grid-template-rows: 40% 35% 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 375px;
+  width: 350px;
+  background-color: white;
+  z-index: 1000;
+  border-radius: 20px;
+}
+
+.card .card-top-background-img {
+  grid-column: 1/-1;
+  background-image: url("../images/bg-pattern-card.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card .name {
+  grid-column: 1/-1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .name h4 {
+  padding: 50px 0 10px 0;
+}
+
+.card .name .localtion {
+  display: block;
+}
+
+.card-profile-image-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 95px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 105px;
+  height: 105px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.card-profile-image {
+  border-radius: 50%;
+}
+
+.social-stats {
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+  border-top: dotted 1px #6a6f81;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.social-stats span {
+  display: block;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  cursor: default;
+  color: #2d3248;
+}
+
+.attribution a {
+  cursor: pointer;
+  color: #ddd;
+}
+
+@media (max-width: 1024px) {
+  .container::before {
+    top: -700px;
+    left: -400px;
+  }
+  .container::after {
+    top: 270px;
+    right: -500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container::before {
+    top: -700px;
+    left: -550px;
+  }
+  .container::after {
+    top: 300px;
+    right: -600px;
+  }
+}
+
+@media (max-width: 426px) {
+  .container::before {
+    top: -700px;
+    left: -680px;
+  }
+  .container::after {
+    top: 300px;
+    right: -700px;
+  }
+  .attribution {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 376px) {
+  .container::before {
+    top: -690px;
+    left: -720px;
+  }
+  .container::after {
+    top: 310px;
+    right: -720px;
+  }
+  .attribution {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
